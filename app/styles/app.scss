@@ -1,0 +1,51 @@
+@import "bootstrap";
+
+$eggshell: #eceeee;
+$trendy-pink: #8e6395;
+$keppel: #35a59c;
+$pickled-bluewood: #344759;
+$tango: #e8741e;
+$white: #ffffff;
+
+
+body {
+  background-color: $eggshell;
+}
+
+.kb-container {
+  .row {
+    padding-top: 5rem;
+  }
+}
+
+// Card list header
+.kb-card-header {
+  @extend .p-2;
+  @extend .d-flex;
+  @extend .justify-content-center;
+  color: $white;
+}
+
+.kb-card-winnie {
+  background-color: $trendy-pink;
+}
+
+.kb-card-bob {
+  background-color: $keppel;
+}
+
+.kb-card-thomas {
+  background-color: $pickled-bluewood;
+}
+
+.kb-card-george {
+  background-color: $tango;
+}
+
+
+// Card list item
+.kb-card-item {
+  @extend .p-3;
+  @extend .mt-2;
+  background-color: $white;
+}

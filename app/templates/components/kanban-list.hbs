@@ -1,0 +1,13 @@
+<header class="kb-card-header kb-card-{{listClassName}}">
+  {{title}}
+</header>
+
+{{#each collection as |todo index|}}
+  {{kanban-list-item todo=todo}}
+{{/each}}
+
+<footer class="mt-3">
+  <button {{action "addCard"}} class="btn btn-link" type="button" name="button">
+    + Add a card
+  </button>
+</footer>
