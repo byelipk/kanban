@@ -2,7 +2,22 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.get('store').push({
+    const promise = this.get('store').findAll('todoList', {
+      include: 'todos'
+    });
+
+    return promise.then(data => {
+       if (data.get('length') === 0) {
+         return this.preloadStore();
+       }
+       else {
+         return data;
+       }
+     });
+  },
+
+  preloadStore() {
+    this.get('store').push({
       data: [
         {
           id: 1,
@@ -82,5 +97,11 @@ export default Ember.Route.extend({
         }
       ]
     });
+
+    this.get('store').peekAll('todo-list').forEach(list => list.save());
+
+    this.get('store').peekAll('todo').forEach(todo => todo.save());
+
+    return this.get('store').peekAll('todo-list');
   }
 });
