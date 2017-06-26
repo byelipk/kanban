@@ -1,13 +1,18 @@
-<header class="kb-card-header kb-card-{{listClassName}}">
-  {{title}}
-</header>
+<div class="kb-card">
+  <header class="kb-card-header" style={{backgroundColor}}>
+    {{list.title}}
+  </header>
 
-{{#each collection as |todo index|}}
-  {{kanban-list-item todo=todo}}
-{{/each}}
+  {{#each list.todos as |todo|}}
+    {{kanban-list-item todo=todo
+                       index=index
+                       shiftLeft=(action 'shiftLeft')
+                       shiftRight=(action 'shiftRight') }}
+  {{/each}}
 
-<footer class="mt-3">
-  <button {{action "addCard"}} class="btn btn-link" type="button" name="button">
-    + Add a card
-  </button>
-</footer>
+  <footer class="mt-3">
+    <button class="btn btn-link pl-0" type="button">
+      + Add a card
+    </button>
+  </footer>
+</div>

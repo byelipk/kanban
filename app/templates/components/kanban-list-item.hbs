@@ -1,5 +1,9 @@
 <div class="d-flex flex-row">
-  <div class="mr-3">&lt;</div>
-  <div>{{todo}}</div>
-  <div class="ml-auto">&gt;</div>
+  {{#if canShiftLeft}}
+    <div {{action "doShiftLeft"}} class="mr-3">&lt;</div>
+  {{/if}}
+  <div>{{todo.task}}</div>
+  {{#if canShiftRight}}
+    <div {{action "doShiftRight"}} class="ml-auto">&gt;</div>
+  {{/if}}
 </div>

@@ -1,0 +1,6 @@
+{
+  "name": "kanban",
+  "dependencies": {
+    "blob-polyfill": "^1.0.20150320"
+  }
+}

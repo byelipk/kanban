@@ -1,0 +1,8 @@
+<div class="row">
+  {{#each todoLists as |list index|}}
+    {{kanban-list list=list
+                  index=index
+                  shiftLeft=(action 'shiftLeft')
+                  shiftRight=(action 'shiftRight') }}
+  {{/each}}
+</div>
