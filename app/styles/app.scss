@@ -29,4 +29,12 @@ body {
   @extend .p-3;
   @extend .mt-2;
   background-color: $white;
+  .shift-left {
+    @extend .mr-3;
+    cursor: pointer;
+  }
+  .shift-right {
+    @extend .ml-auto;
+    cursor: pointer;
+  }
 }

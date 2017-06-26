@@ -14,7 +14,7 @@ export default Ember.Component.extend({
     },
 
     shiftRight(todo, index) {
-      let dst = this.get('todoLists')[index + 1];
+      let dst = this.get('todoLists').objectAtContent(index + 1);
 
       if (dst) {
         todo.set('todoList', dst);
