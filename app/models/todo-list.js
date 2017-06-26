@@ -4,7 +4,6 @@ export default DS.Model.extend({
   title: DS.attr('string'),
   color: DS.attr('string'),
   todos: DS.hasMany('todo', {
-    async: true,
-    dependent: 'destroy'
+    async: true
   })
 });
