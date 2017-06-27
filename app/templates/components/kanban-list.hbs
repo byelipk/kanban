@@ -1,7 +1,5 @@
 <div class="kb-card">
-  <header class="kb-card-header" style={{backgroundColor}}>
-    {{list.title}}
-  </header>
+  {{kanban-card-header list}}
 
   {{#each list.todos as |todo|}}
     {{kanban-list-item todo=todo
