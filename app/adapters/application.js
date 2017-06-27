@@ -1,5 +1,6 @@
 // export { default } from 'ember-local-storage/adapters/local';
 
+import Ember from 'ember';
 import DS from 'ember-data';
 import Inflector from 'ember-inflector';
 
